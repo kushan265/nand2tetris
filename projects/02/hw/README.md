@@ -2,8 +2,7 @@ This project realises the ALU on a icebreaker FPGA board and provides access to
 the ALU state registers by serially shifting out the ALU state using an ad-hoc
 protocol which works as follows:
 
-Serial Shift Out
-================
+# Serial Shift Out
 
 Data is shifted out using 3 control signals: S_CLK, S_DATA and S_RESET.
 
@@ -14,8 +13,7 @@ S_RESET is asserted for 1 clock cycle when entire ALU state has been shifted
 out. When the reader sees this it should reset it's data to 0. This provides
 a kind of frame-synchronisation.
 
-Serial Shift In
-===============
+# Serial Shift In
 
 Data is shifted into the ALU state registers using 3 control signals: S_CLK,
 S_DATA_IN, S_DATA_AVAILABLE.
